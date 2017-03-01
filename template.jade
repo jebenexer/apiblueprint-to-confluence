@@ -17,7 +17,7 @@ ac:layout
           ac:parameter(ac:name="patterns") *.postman_collection
           ac:parameter(ac:name="upload") false
 
-      h1 Resumo
+      h1 Summary
 
       table
         each group in api.resourceGroups
@@ -45,21 +45,21 @@ ac:layout
             h3 #{action.method} #{resource.uriTemplate}
 
             if action.description
-              //- h5 Descrição
+              //- h5 Description
               div!= markdown(action.description)
 
             if action.parameters && action.parameters.length
 
-              h5 Parâmetros
+              h5 Parameters
 
               table(width="100%")
                 thead: tr
-                  th Nome
-                  th Tipo
-                  th Padrão
-                  th Exemplo
-                  th Obrigatório
-                  th Descrição
+                  th Name
+                  th Type
+                  th Default
+                  th Example
+                  th Required
+                  th Description
                 tbody
                   each parameter in action.parameters
                     tr
@@ -67,7 +67,7 @@ ac:layout
                       td= parameter.type
                       td= parameter.default
                       td= parameter.example
-                      td= parameter.required ? 'sim' : 'não'
+                      td= parameter.required ? 'yes' : 'no'
                       td!= markdown(parameter.name)
 
             if action.body
@@ -83,7 +83,7 @@ ac:layout
                   hr/
 
                 if example.requests && example.requests.length
-                  h5 Requisição
+                  h5 Request
                   each request in example.requests
 
                     != markdown(request.description)
@@ -119,11 +119,11 @@ ac:layout
                           | ]]>
 
                 if example.responses && example.responses.length
-                  h5 Resposta#{example.responses.length > 1 ? 's' : ''}
+                  h5 Response#{example.responses.length > 1 ? 's' : ''}
                   table(width="100%")
                     thead: tr
-                      th Código
-                      th Commentário
+                      th Code
+                      th Comment
                     each response in example.responses
                       tr
                         td: b #{response.name}
