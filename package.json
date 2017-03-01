@@ -1,6 +1,6 @@
 {
-  "name": "apiblueprint-to-confluence",
-  "version": "1.0.1",
+  "name": "apiblueprint-to-confluence-english",
+  "version": "1.2.0",
   "description": "Parses APIBlueprint source code and compiles to Confluence format",
   "main": "index.coffee",
   "bin": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dgmike/apiblieprint-to-confluence.git"
+    "url": "https://github.com/nickel715/apiblieprint-to-confluence.git"
   },
   "keywords": [
     "apiblueprint",
@@ -23,9 +23,9 @@
   "author": "Michael Granados <michaelgranados@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dgmike/apiblieprint-to-confluence/issues"
+    "url": "https://github.com/nickel715/apiblieprint-to-confluence/issues"
   },
-  "homepage": "https://github.com/dgmike/apiblieprint-to-confluence",
+  "homepage": "https://github.com/nickel715/apiblieprint-to-confluence",
   "dependencies": {
     "aglio": "^1.17.1-experimental3",
     "coffee-script": "^1.9.2",
